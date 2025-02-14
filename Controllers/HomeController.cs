@@ -16,8 +16,8 @@ namespace BlockBuster.WebApp.Controllers
         {
             _logger = logger;
             _myColors = [ "red", "green", "blue" ];
-            _myCities = ["Westerly", "Cocoa Beach", "South Kingstown"];
-            _myHobbies = ["Gaming", "Coding", "Movies"];
+            _myCities = ["Westerly", "Cocoa Beach", "South Kingstown","Cape Canaveral","Providence"];
+            _myHobbies = ["Gaming", "Coding", "Movies","TV","Work"];
 
         }
         public IActionResult Index()
