@@ -2,6 +2,7 @@ using System.Diagnostics;
 using BlockBuster.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ObjectPool;
+using BlockBuster;
 
 namespace BlockBuster.WebApp.Controllers
 {
@@ -43,6 +44,11 @@ namespace BlockBuster.WebApp.Controllers
         {
             ViewBag.MyCities = _myCities;
             return View();
+        }
+        public IActionResult Movies()
+        {
+            var movieList = BlockBuster.BasicFunctions.GetAllMoviesGenrePlusDirector();
+            return View(movieList);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
