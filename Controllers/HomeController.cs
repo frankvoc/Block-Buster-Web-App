@@ -47,7 +47,7 @@ namespace BlockBuster.WebApp.Controllers
         }
         public IActionResult Movies()
         {
-            var movieList = BlockBuster.BasicFunctions.GetAllMoviesGenrePlusDirector();
+            var movieList = BasicFunctions.GetAllMoviesGenrePlusDirector();
             return View(movieList);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
